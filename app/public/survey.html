@@ -37,7 +37,7 @@
         </div>
         <div class="form-group">
             <label for="question2"><h4>Question 2</h4>You would rather exercise instead of party.</label>
-            <select class="form-control" id="question2">
+            <select class="form-control w-25" id="question2">
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -48,7 +48,7 @@
         </div>
         <div class="form-group">
             <label for="question3"><h4>Question 3</h4>You like art more than sports.</label>
-            <select class="form-control" id="question3">
+            <select class="form-control w-25" id="question3">
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -59,7 +59,7 @@
         </div>
         <div class="form-group">
             <label for="question4"><h4>Question 4</h4>You think seafood is a suitable meal.</label>
-            <select class="form-control" id="question4"> 
+            <select class="form-control w-25" id="question4"> 
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -70,7 +70,7 @@
         </div>
         <div class="form-group">
             <label for="question5"><h4>Question 5</h4>You consider yourself an active person.</label>
-            <select class="form-control" id="question5"> 
+            <select class="form-control w-25" id="question5"> 
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -81,7 +81,7 @@
         </div>
         <div class="form-group">
             <label for="question6"><h4>Question 6</h4>You enjoy listening to country music.</label>
-            <select class="form-control" id="question6">
+            <select class="form-control w-25" id="question6">
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -92,7 +92,7 @@
         </div>
         <div class="form-group">
             <label for="question7"><h4>Question 7</h4>You consider yourself a spontaneous person.</label>
-            <select class="form-control" id="question7"> 
+            <select class="form-control w-25" id="question7"> 
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -103,7 +103,7 @@
         </div>
         <div class="form-group">
             <label for="question8"><h4>Question 8</h4>You would rather go eat a nice meal instead of go to a concert.</label>
-            <select class="form-control" id="question8"> 
+            <select class="form-control w-25" id="question8"> 
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -114,7 +114,7 @@
         </div>
         <div class="form-group">
             <label for="question9"><h4>Question 9</h4>You have a great sense of humor.</label>
-            <select class="form-control" id="question9">
+            <select class="form-control w-25" id="question9">
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -125,7 +125,7 @@
         </div>
         <div class="form-group">
             <label for="question10"><h4>Question 10</h4>You like to speak your mind.</label>
-            <select class="form-control" id="question10"> 
+            <select class="form-control w-25" id="question10"> 
                 <option selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
@@ -138,8 +138,65 @@
     <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
 </div>
 
-<script type="text/javascript" src="../../server.js"></script>
+<script type="text/javascript">
+$("#submitBtn").on("click", function(event){
+    event.preventDefault();
+    var userSurveyArray = [];
+    var userComparisonArray = [];
+    var allFriendScores = [];
+    var dataCtr = 0;
 
+    function totalDiff(array) {
+        //once we have all differences from the user and a person from the friends list we then get the the total difference
+        var add = (a, b) =>
+            a + b
+            var totalDiff = array.reduce(add);
+
+            //console.log(totalDiff);
+            allFriendScores.push(totalDiff);
+            console.log("all "+ allFriendScores);
+    }
+
+
+    function getFriendScores(){
+        $.get("/api/friends", function(data) {
+        
+        console.log(data);
+        console.log(dataCtr)
+            if (data) {
+                if(dataCtr <= data.length){
+                    userComparisonArray = [];
+                    for(var i=0; i < userSurveyArray.length; i++){
+                        answerDiff = Math.abs(userSurveyArray[i] - data[dataCtr].scores[i]);
+                        userComparisonArray.push(answerDiff);
+                    }
+                    console.log("uCA " + userComparisonArray);
+                    totalDiff(userComparisonArray);
+                    dataCtr++;
+                    }
+                    
+                }
+        });
+    }
+
+    //use a for loop to place the user's survey answers in an array
+    for(var i=1; i < 11; i++){
+        var question = "#question" + i + " :selected";
+        var userChoice = $(question).text().split(" (");
+        userSurveyArray.push(userChoice[0])
+    }
+    console.log(userSurveyArray);
+    getFriendScores();
+    
+
+    
+
+    
+});
+
+
+
+</script>
 </body>
 
 </html>

@@ -87,6 +87,8 @@ ex. for finding smallest total difference. I will find the difference of each us
   var number = parseInt(array.join(','));
   console.log(Math.min(number));
 
+  Math.abs() to find absolute value
+
 7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
    * The modal should display both the name and picture of the closest match.
 
