@@ -1,0 +1,25 @@
+{
+  "name": "FriendFinder",
+  "version": "1.0.0",
+  "description": "This app is a compatibility-based Friend Finder app. This full-stack site will take in results from users' surveys, then compares their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willrackley/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willrackley/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/willrackley/FriendFinder#readme"
+}
