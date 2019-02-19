@@ -8,9 +8,10 @@ require(path.join(__dirname, "./app/routing/htmlRoutes"))(app);
 
 var PORT = process.env.PORT || 3000;
 
+app.use(express.static('./app/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'))
+
 
 
 
