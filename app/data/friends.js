@@ -3,7 +3,7 @@ var path = require("path");
 var friends = [
     {
         "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"http://www.free-largeimages.com/wp-content/uploads/2014/12/Happy_person-9.jpg",
         "scores":[
             5,
             1,
@@ -19,7 +19,7 @@ var friends = [
     },
     {
         "name":"Sam",
-        "photo":"sam.jpg",
+        "photo":"http://natashatracy.com/blog/wp-content/uploads/2012/11/MP90044342111.jpg",
         "scores":[
             4,
             1,
