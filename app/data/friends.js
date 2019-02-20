@@ -21,7 +21,7 @@ var friends = [
     },
     {
         "name":"Sam",
-        "photo":"http://natashatracy.com/blog/wp-content/uploads/2012/11/MP90044342111.jpg",
+        "photo":"https://www.devlindental.com/blog/wp-content/uploads/2011/08/shutterstock_69235000.jpg",
         "age": 27,
         "location": "Buffalo, NY",
         "scores":[

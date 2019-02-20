@@ -7,27 +7,28 @@
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
+  
  
 </head>
 
 <body>
 
 <div class="container">
-    <form>
+    <form id="form">
         <div class="form-group">
             <label for="nameInput">Name</label>
-            <input type="name" class="form-control w-75" id="nameInput">
+            <input type="name" class="form-control w-75" id="nameInput" required>
         </div>
+        
         <div class="form-group">
             <label for="photoInput">Photo Link</label>
-            <input type="link" class="form-control w-75" id="photoInput">
+            <input type="link" class="form-control w-75" id="photoInput" required>
         </div>
 
         <div class="form-group">
             <label for="question1"><h4>Question 1</h4>You would rather watch a movie at home, instead of going to a movie theater.</label>
-            <select class="form-control w-25" id="question1">
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question1" required>
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -37,8 +38,8 @@
         </div>
         <div class="form-group">
             <label for="question2"><h4>Question 2</h4>You would rather exercise instead of party.</label>
-            <select class="form-control w-25" id="question2">
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question2" required>
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -48,8 +49,8 @@
         </div>
         <div class="form-group">
             <label for="question3"><h4>Question 3</h4>You like art more than sports.</label>
-            <select class="form-control w-25" id="question3">
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question3" required>
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -59,8 +60,8 @@
         </div>
         <div class="form-group">
             <label for="question4"><h4>Question 4</h4>You think seafood is a suitable meal.</label>
-            <select class="form-control w-25" id="question4"> 
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question4" required> 
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -70,8 +71,8 @@
         </div>
         <div class="form-group">
             <label for="question5"><h4>Question 5</h4>You consider yourself an active person.</label>
-            <select class="form-control w-25" id="question5"> 
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question5" required> 
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -81,8 +82,8 @@
         </div>
         <div class="form-group">
             <label for="question6"><h4>Question 6</h4>You enjoy listening to country music.</label>
-            <select class="form-control w-25" id="question6">
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question6" required>
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -92,8 +93,8 @@
         </div>
         <div class="form-group">
             <label for="question7"><h4>Question 7</h4>You consider yourself a spontaneous person.</label>
-            <select class="form-control w-25" id="question7"> 
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question7" required> 
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -103,8 +104,8 @@
         </div>
         <div class="form-group">
             <label for="question8"><h4>Question 8</h4>You would rather go eat a nice meal instead of go to a concert.</label>
-            <select class="form-control w-25" id="question8"> 
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question8" required> 
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -114,8 +115,8 @@
         </div>
         <div class="form-group">
             <label for="question9"><h4>Question 9</h4>You have a great sense of humor.</label>
-            <select class="form-control w-25" id="question9">
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question9" required>
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -125,8 +126,8 @@
         </div>
         <div class="form-group">
             <label for="question10"><h4>Question 10</h4>You like to speak your mind.</label>
-            <select class="form-control w-25" id="question10"> 
-                <option selected disabled>Select an Option</option>
+            <select class="form-control w-25" id="question10" required> 
+                <option value="" selected disabled>Select an Option</option>
                 <option>1 (strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -134,11 +135,9 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
 </div>
-
-
 
 
 <div class="modal" tabindex="-1" role="dialog">
@@ -166,85 +165,10 @@
 </div>
 
 
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$("#submitBtn").on("click", function(event){
-    event.preventDefault();
-
-    var userSurveyArray = [];
-    var userComparisonArray = [];
-    var allFriendScores = [];
-    var dataCtr = 0;
-    var matchIndex = 0;
-
-    //once we have all differences from the user and a person from the friends list we then get the the total difference
-    function totalDiff(array) {
-        
-        var add = (a, b) =>
-            a + b
-            var totalDiff = array.reduce(add);
-
-            allFriendScores.push(totalDiff);
-            console.log("all "+ allFriendScores);
-            console.log(Math.min(...allFriendScores));
-            var lowestDiff = Math.min(...allFriendScores);
-            matchIndex = allFriendScores.indexOf(lowestDiff)
-            console.log(allFriendScores.indexOf(lowestDiff));
-    }
-
-    //this function is used to display the users friend match in the modal
-    function matchDisplay(data, index){
-        $("#modalName").text(data[index].name + ", " + data[index].age);
-        $("#modalLocation").text("" + data[index].location);
-        $("#modalImg").attr("src", data[index].photo);
-        $('.modal').modal('show');
-    }
-
-    //this function uses a git request to get info from the friends api list
-    function getFriendScores(){
-        $.get("/api/friends", function(data) {
-        
-        console.log(data);
-       
-            if (data) {
-                if(dataCtr < data.length){
-                    userComparisonArray = [];
-                    for(var i=0; i < userSurveyArray.length; i++){
-                        answerDiff = Math.abs(userSurveyArray[i] - data[dataCtr].scores[i]);
-                        userComparisonArray.push(answerDiff);
-                    }
-                    console.log("uCA " + userComparisonArray);
-                    totalDiff(userComparisonArray);
-                    dataCtr++;
-                    matchDisplay(data, matchIndex);
-                    getFriendScores();
-                    
-                    } 
-                }
-        });
-    }
-
-    //use a for loop to place the user's survey answers in an array
-    for(var i=1; i < 11; i++){
-        var question = "#question" + i + " :selected";
-        var userChoice = $(question).text().split(" (");
-        userSurveyArray.push(userChoice[0])
-    }
-    console.log(userSurveyArray);
-    getFriendScores();
-
-    //clearing selected form values
-    for(var i=0; i < 10; i++){
-        var question = "#question" + (i+1);
-        $(question).val('Select an Option');
-    }
-});
-
-//still need to add form validation
-
-
-</script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/logic.js"></script>
 </body>
 
 </html>

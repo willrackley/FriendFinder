@@ -8,12 +8,13 @@
 }
 
 #friendsBtn {
+    transition: .3s ease;
     background: #fff279;
     color: #000000;
 }
 
 #friendsBtn:hover {
-    background: #fffbda;
+    background-image: radial-gradient(circle,#fdfdec, #fff279);
 }
 
 .jumbotron {
@@ -29,4 +30,20 @@
 
 #homeLinks {
     margin-top: -20px;
+    border-right: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    
 }
+
+#homeLinks a:hover {
+    transition: .3s ease;
+    text-decoration: none;
+    border-right: 3px solid #444343;
+    border-left: 3px solid #444343;
+    margin: 0 10px;
+}
+
+.page-footer {
+    background: #fff279;
+}
+
