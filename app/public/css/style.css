@@ -1,0 +1,32 @@
+.navbar {
+    background: #fff279;
+}
+
+.navbar span {
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+#friendsBtn {
+    background: #fff279;
+    color: #000000;
+}
+
+#friendsBtn:hover {
+    background: #fffbda;
+}
+
+.jumbotron {
+    background-image: url(../images/friends.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 500px;
+}
+
+.jbtPara {
+    margin-top: 170px;
+}
+
+#homeLinks {
+    margin-top: -20px;
+}

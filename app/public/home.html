@@ -7,29 +7,31 @@
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:3000/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
-<div class="container-fluid">
-    <div class="jumbotron">
-        <h1 class="text-center text-white display-2">Friend Finder</h1>
-        <hr>
-        <div class="jbtPara">
-            <h5 class="text-white">The easiest way to meet new friends.</h5>
-            <!-- <h4 class="text-white">Start by answering a few questions.</h4> -->
-            <a href="/survey"><button class="btn btn-danger btn-lg text-center" id=""><span class=""></span> Find Friends</button></a>
-        </div>
-        
-    </div>
-</div>
+    <nav class="navbar mb-4">
+        <span class="navbar-brand mb-0 display-4 mx-auto p-2">FRIEND <i class="fab fa-searchengin"></i> FINDER</span>
+    </nav>
 
-<div class="container-fluid">
-    <a href="/api/friends">API Friends List</a>
-    | 
-    <a href="#">GitHub Repo</a>
-</div>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <div class="jbtPara">
+                <h4 class="text-white display-4">The easiest way to meet new friends.</h4>
+                <a href="/survey"><button class="btn  btn-lg text-center" id="friendsBtn"><span class=""></span> Get Started</button></a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container-fluid" id="homeLinks">
+        <a class="text-dark" href="/api/friends">API Friends List</a>
+        | 
+        <a class="text-dark" href="#">GitHub Repo</a>
+    </div>
 
 
 
