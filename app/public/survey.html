@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg mb-4">
+    <nav class="navbar navbar-expand-lg mb-5">
          <div class='container'>
-            <a class="navbar-brand mb-0 mx-auto p-2 text-dark" href="/"><h3>FRIEND <i class="fab fa-searchengin"></i> FINDER</h3></a>
+            <a class="navbar-brand mb-0 pl-lg-0 p-2 pl-sm-3 text-dark" href="/"><h3>FRIEND <i class="fab fa-searchengin"></i> FINDER</h3></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,25 +35,25 @@
 
    
 
-    <div class="container">
+    <div class="container surveyCont">
         <h2 class="mb-3">Tell Us About Yourself</h2>
         <form id="form">
             <div class="form-row mb-3">
                 <div class="col-md-6">
-                    <label for="nameInput">Name</label>
-                    <input type="name" class="form-control w-75" id="nameInput" required>
+                    <label for="nameInput">First Name</label>
+                    <input type="text" class="form-control w-75" id="nameInput" placeholder="William" required>
                 </div>
                 
                 <div class="col-md-6">
                     <label for="photoInput">Photo Link</label>
-                    <input type="link" class="form-control w-75" id="photoInput" required>
+                    <input type="text" class="form-control w-75" id="photoInput" placeholder="https://insert-your-photo-link" required>
                 </div>
             </div>
 
             <div class="form-row mb-5">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-sm-3">
                     <label for="ageInput">Age</label>
-                    <input type="text" class="form-control w-75" id="ageInput" required>
+                    <input type="number" class="form-control w-75" id="ageInput" placeholder="21" required>
                 </div>
                 
                 <div class="col-md-6">
@@ -170,7 +172,7 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-dark">Submit</button>
         </form>
     </div>
 
@@ -178,14 +180,14 @@
     <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-            <div class="modal-header text-center">
-                <h5 class="modal-title">We've found a great friend for you!
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header">
+                <h3 class='modal-title w-100 text-center'>FRIEND <i class="fab fa-searchengin"></i> FINDER</h3>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+                </button> -->
             </div>
             <div class="modal-body">
+                <h4 class='mb-4 text-center'>We've found a great friend for you!</h4>
                 <h3 id="modalName"></h3> 
                 <p></p>
                 <img id="modalImg" src="" class="img-fluid" alt="picture of new friend">
@@ -193,7 +195,7 @@
                 <h4 id="modalLocation"> </h4>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
             </div>
             </div>
         </div>

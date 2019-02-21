@@ -7,8 +7,17 @@
     font-size: 30px;
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    border: 1px solid #fff279;
+}
+
 .navbar-nav a:hover {
     color: #000000 !important;
+}
+
+.navbar-brand h3{
+    font-family: 'Permanent Marker', cursive;
 }
 
 #friendsBtn {
@@ -42,6 +51,34 @@
 }
 
 .modal-footer {
-    background: #fff279;  
+    background: #fff279; 
 }
 
+.modal-title {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.modal-open .surveyCont, .modal-open .page-footer {
+    -webkit-filter: blur(5px) grayscale(90%);
+}
+
+/* ========== Media Query =========== */
+
+@media screen and (max-width: 640px){
+
+    .navbar-brand {
+        margin-left: 40px;
+    }
+
+    .navbar-toggler-icon {
+        margin-left: 135px;
+    }
+
+    #nameInput{
+        margin-bottom: 15px;
+    }
+
+    #ageInput {
+        margin-bottom: 15px;
+    }
+}
