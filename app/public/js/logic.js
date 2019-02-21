@@ -4,14 +4,6 @@
 $("#form").submit(function(event){
     event.preventDefault(); 
     
-    //console.log($('.form-control')[0].validity.valid);
-    
-    // var questionId = "$('#question1 :selected').val() === 'Select an Option'"
-    // if(questionId || $('#nameInput').val() === "" || $('#photoInput').val() === ""){
-    //     alert("yo");
-    //     event.preventDefault();
-    //     event.stopPropagation();
-    // } else {
     var userSurveyArray = [];
     var userComparisonArray = [];
     var allFriendScores = [];
@@ -30,7 +22,6 @@ $("#form").submit(function(event){
             console.log(Math.min(...allFriendScores));
             var lowestDiff = Math.min(...allFriendScores);
             matchIndex = allFriendScores.indexOf(lowestDiff)
-            console.log(allFriendScores.indexOf(lowestDiff));
     }
 
     //this function is used to display the users friend match in the modal
@@ -79,8 +70,9 @@ $("#form").submit(function(event){
         var question = "#question" + (i+1);
         $(question).val('Select an Option');
     }
-    // }
+    $('#nameInput').val('');
+    $('#photoInput').val('');
+    $('#locationInput').val('');
+    $('#ageInput').val('');
 });
-
-//still need to add form validation
 
