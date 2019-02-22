@@ -4,4 +4,4 @@
 ## How it Works
 * Upon opening the web application the user is shown the homepage where they have the option to 'get started'.
 
-![Home Page](/app/public/images/homepage.png)
+![Home Page](../app/public/images/homepage.png)
