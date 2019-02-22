@@ -1,4 +1,3 @@
-//var path = require("path");
 var friends = require("../data/friends");
 
 module.exports = function(app){
@@ -14,9 +13,6 @@ module.exports = function(app){
         newUserInfo.routeName = newUserInfo.name.replace(/\s+/g, "").toLowerCase();
       
         console.log(newUserInfo);
-    
-        //gonna need to then push to an array
       });
-    
 };
 
