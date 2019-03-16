@@ -17,5 +17,5 @@
 ![Match Modal](/app/public/images/matchSS.png)
 ##
 
-##view the app at the link below
+## view the app at the link below
 https://mysterious-gorge-33344.herokuapp.com/
